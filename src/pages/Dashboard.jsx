@@ -10,3 +10,11 @@ export default function Dashboard() {
   const [live, setLive] = useState(false)
   const { user } = useAuth()
   useEffect(() => { apiRequest('/reports').then(data => { setReports(data.reports); setLive(true) }).catch(() => {}) }, [])
+    const stats = [
+       { label: 'Total reports', value: reports.length, icon: FileText },
+    { label: 'Pending', value: reports.filter(r => r.status === 'Pending').length, icon: Clock3 },
+    { label: 'In progress', value: reports.filter(r => r.status === 'In Progress').length, icon: AlertCircle },
+    { label: 'Resolved', value: reports.filter(r => r.status === 'Resolved').length, icon: CheckCircle2 }
+  ]
+  
+         

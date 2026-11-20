@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
@@ -13,4 +11,3 @@ export default function ProtectedRoute({ children }) {
 
   return user ? children : <Navigate to="/login" replace />
 }
->>>>>>> b9b05633453252cabfe4236272519de6877acb67

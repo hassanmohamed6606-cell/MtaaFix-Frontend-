@@ -1,0 +1,6 @@
+import { useEffect, useState } from 'react'
+import { AlertCircle, CheckCircle2, Clock3, FileText } from 'lucide-react'
+import { apiRequest } from '../services/api'
+import { sampleReports } from '../data/sampleReports'
+import ReportCard from '../components/ReportCard'
+import { useAuth } from '../context/AuthContext'
